@@ -28,13 +28,13 @@ create table videos(
     category int
 );
 
-insert into users (username, password, email_address, rights)
-values
-("admin", "$argon2id$v=19$m=65536,t=3,p=4$SncX/YtGUYZaUNtCLjh/Nw$sD+80clqLUS3LZZO6xor/08QRT9/onb14D7oZoA01FM", "admin@admin.hu", 1);
-
 insert into subscriptions (name, description, price)
 values
 ("Default", "Restricted access to videos.", 0),
 ("Plus", "Allow access to Plus videos.", 5),
 ("Premium", "Allow access to Premium videos.", 10),
 ("Ultra", "Allow access to all videos.", 15);
+
+insert into users (username, password, email_address, rights)
+values
+("admin", "$argon2id$v=19$m=65536,t=3,p=4$SncX/YtGUYZaUNtCLjh/Nw$sD+80clqLUS3LZZO6xor/08QRT9/onb14D7oZoA01FM", "admin@admin.hu", 1);
