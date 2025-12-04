@@ -6,7 +6,7 @@ export default function Register() {
 
   const [formData, setFormData] = useState({
     username: "",
-    email: "",
+    email_address: "",
     password: "",
     passwordRepeat: "",
   });
@@ -20,7 +20,7 @@ export default function Register() {
   };
 
   const validateForm = () => {
-    if (!formData.username || !formData.email || !formData.password) {
+    if (!formData.username || !formData.email_address || !formData.password) {
       return "Minden mezőt ki kell tölteni!";
     }
 
@@ -49,7 +49,7 @@ export default function Register() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           username: formData.username,
-          email: formData.email,
+          email_address: formData.email_address,
           password: formData.password,
         }),
       });
@@ -105,7 +105,7 @@ export default function Register() {
               type="email"
               className="form-control"
               id="email"
-              name="email"
+              name="email_address"
               placeholder="pelda@domain.hu"
               value={formData.email}
               onChange={handleChange}
